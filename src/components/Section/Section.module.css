@@ -1,0 +1,358 @@
+/*--------------------------Google Fonts------------------------------------ */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+/* ------------------------------Empty component CSS start------------------------------ */
+
+.Empty {
+  width: 100%;
+  height: 0vh;
+  /* border: 1px solid rgb(255, 0, 0); */
+}
+@media screen and (max-width: 1169px) {
+  .Empty {
+    width: 100%;
+    height: 100vh;
+    /* border: 1px solid rgb(255, 0, 0); */
+  }
+}
+/* ------------------------------Empty component CSS end------------------------------ */
+
+/* ------------------------------motor detail images component CSS start------------------------------ */
+
+.motorContainer {
+  width: 100%;
+  height: 700px;
+  /* border: 1px solid red; */
+  z-index: 2;
+  position: relative;
+  /* top: 100vh; */
+  display: flex;
+}
+.motorBox {
+  height: 100%;
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+  /* overflow: hidden; */
+  position: relative;
+  /* margin: 0.5%; */
+  transition: all 1s;
+}
+
+.motorBox img {
+  width: 200%;
+  /* height: (100%-10vh); */
+  height: 100%;
+  /* object-fit:fill; */
+  transition: all 1s;
+}
+
+.motorBox .des {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 3;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  transition: height 1s;
+  background: #01016b8c;
+  font-family: "uni_neuebook";
+  color: #ffffff;
+}
+.motorBox .des h2 {
+  font-size: 18px;
+  line-height: 16px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.motorBox .des h2 i {
+  margin-left: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.2s;
+}
+.motorBox .des p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 15px;
+  font-family: "uni_neueregular";
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(50px);
+  transition: transform 0.6s;
+}
+.motorBox:hover {
+  flex: 3;
+}
+.motorBox:hover .des {
+  height: 80px;
+}
+.motorBox:hover .des h2 i {
+  visibility: visible;
+  opacity: 1;
+  transform: rotate(-450deg);
+}
+.motorBox:hover .des p {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-1px);
+}
+.motorBox:hover img {
+  width: 100%;
+}
+
+/* ------------------------------motor detail images component CSS end------------------------------ */
+
+/* ------------------------Popup of {happy to connect} component CSS start------------------------ */
+
+.container {
+  width: 100vw;
+  height: 0vh;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #0000009c;
+}
+.parentDiv {
+  position: fixed;
+  right: 20px;
+  bottom: 0;
+  width: 300px;
+  /* height: 50px; */
+  /* border: 1px solid yellow; */
+  transition: height 0.3s ease-in-out;
+}
+.btn {
+  background-color: #0084ff;
+  font-size: 16px;
+  font-weight: 300;
+  width: 160px;
+  height: 43px;
+  border: none;
+  font-family: "Quicksand", sans-serif;
+  color: #ffffff;
+  float: right;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.popupDiv {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  transition: height 0.5s ease;
+  flex-direction: column;
+  background: #2f71b7;
+  padding: 9px;
+  /* border: 1px solid red; */
+  overflow-x: hidden;
+}
+.popupDiv1 a img {
+  width: 100%;
+}
+
+.popupDiv2 {
+  display: flex;
+  list-style: none;
+  margin-top: 12px;
+  justify-content: space-between;
+  /* border: 1px solid rgb(247, 0, 0); */
+  padding: 0 15px;
+  height: 65px;
+}
+.popupDiv2 li {
+  padding: 0 20px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid rgb(247, 0, 0); */
+}
+.popupDiv2 li a {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(8px);
+}
+
+.popupDiv2 li a span {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 10px;
+  color: #ffffff;
+}
+.popupDiv2 li:nth-child(1),
+.popupDiv2 li:nth-child(2) {
+  border-right: 1px solid #b1b1b1bd;
+}
+
+/* ------------------------Popup of {happy to connect} component CSS end------------------------ */
+
+/* ------------------------------Profile Card  component CSS Start-----------------------------  */
+
+.profileCardContainer {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: #f5f2f2 url(../../../public/images/dots-bg.png) center;
+  background-attachment: fixed;
+  transition: background-position 0.05s linear;
+  background-size: cover;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0 0 0;
+  font-family: "Quicksand", sans-serif;
+}
+.pcDiv1 {
+  width: 1050px;
+  height: 120px;
+  padding: 20px 0 10px 0;
+  background-color: #f5f2f2;
+  position: relative;
+  display: flex;
+  /* border: 1px solid black; */
+  justify-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.pcDiv1 h3 {
+  font-size: 25px;
+}
+.filter {
+  position: relative;
+  display: flex;
+  gap: 20px;
+}
+.filter label {
+  gap: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+.filter label input {
+  opacity: 0;
+}
+.filter label span .imgHover {
+  display: none;
+}
+.filter label:hover span .imgHover {
+  display: block;
+}
+
+.pcDiv2 {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* width: 1050px; */
+  gap: 10px;
+  width: 950px;
+  height: 350px;
+  padding: 0 0 0 2px;
+  /* border: 1px solid black; */
+  background-color: #f5f2f2;
+}
+.pcDiv2Top {
+  width: 100%;
+  height: 270px;
+  /* border: 1px solid red; */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.pcDiv2TopScroll {
+  width: auto;
+  height: 310px;
+  /* border: 1px solid yellow; */
+  display: flex;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  position: relative;
+  gap: 37px;
+  padding-left: 2px;
+}
+.pcDiv2CardBox {
+  width: 289px;
+  /* height: 300px; */
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  /* box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.5); */
+  box-shadow: 0px 0.1px 0.4px -5px rgba(0, 0, 0, 0.348),
+    0px 0.3px 1.1px -5px rgba(0, 0, 0, 0.5),
+    0px 0.6px 2.7px -5px rgba(0, 0, 0, 0.652), 0px 2px 9px -5px rgba(0, 0, 0, 1);
+  /* border: 1px solid brown; */
+}
+.pcDiv2CardBox a {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid rgb(255, 0, 0); */
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  background: #ffffff;
+}
+/* .image img{
+
+} */
+.pcDiv2CardBox .image {
+  position: relative;
+}
+.pcDiv2CardBox a span {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  background-color: #030352cc;
+  padding: 2px 14px;
+  color: #ffffff;
+  font-size: 14px;
+}
+.content {
+  float: left;
+  width: 100%;
+  height: 80px;
+  padding: 10px 18px;
+}
+.content p {
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  width: 100%;
+  height: 50px;
+  color: #000000;
+  font-size: 15px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+}
+.pcDiv2Bottom {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 25px;
+  /* border: 1px solid blue; */
+  margin-top: 15px;
+}
+.pcDiv2Bottom button {
+  width: 35px;
+  height: 35px;
+  border-radius: 3px;
+  background: #030352;
+  border: none;
+  outline: none;
+  color: #ffffff;
+}
+/* ------------------------------Profile Card  component CSS End-----------------------------  */

@@ -1,0 +1,36 @@
+.MainCarouselDiv {
+  width: 100%;
+  height: 100vh;
+  /* position: fixed ; */
+  position: sticky !important;
+  top: 0px;
+  z-index: 2;
+}
+.carouselItem{
+    width: 100%;
+    height: 100%;
+}
+.MainCarouselDiv img{
+    height: 100%;
+}
+@media screen and (max-width: 1169px) {
+  .MainCarouselDiv {
+    top: 60px;
+    height: 70vh;
+    position: relative !important;
+    /* border: 1px solid red; */
+    overflow: hidden;
+    margin-bottom: 10vh;
+  }
+  .carouselItem{
+    width: 100%;
+    height: 70vh !important;
+    /* border: 1px solid rgb(51, 255, 0); */
+    overflow: hidden;
+}
+  .MainCarouselDiv img{
+    width:100vw !important;
+    height: 500px !important;
+    /* object-fit: cover; */
+}
+}
