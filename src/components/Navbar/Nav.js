@@ -18,6 +18,8 @@ export function Nav() {
     Media: false,
   });
 
+  // const aboutUsRef=useRef()
+
   // const Toggle = () => {
   //   if (showColumList == true) {
   //     document.body.style.position = "fixed";
@@ -83,6 +85,7 @@ export function Nav() {
   };
 
   const handleMouseOut = (event, item) => {
+    // if(aboutUsRef.current !=== event.terget)
     setShowNavList({ ...showNavList, [item]: false });
   };
 
@@ -340,7 +343,7 @@ const NavBarEvents = ({
     );
   } else if (showNavList.AboutUs === true) {
     return (
-      <div className={NavBar.hoverList}>
+      <div className={NavBar.hoverList} >
         <div className={NavBar.insideHoverList}>
           <div className={NavBar.hoverListImage}>
             <img
