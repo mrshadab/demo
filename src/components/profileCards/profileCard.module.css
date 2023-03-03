@@ -1,83 +1,159 @@
-.cardsParentDiv{
-    display: flex;
-}
-/* The container */
-.container {
-  /* display: block; */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+.profileCardContainer {
+  width: 100%;
+  height: 100vh;
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  background: #f5f2f2 url(../../../public/images/dots-bg.png) center;
+  background-attachment: fixed;
+  transition: background-position 0.05s linear;
+  background-size: cover;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0 0 0;
+  font-family: "Quicksand", sans-serif;
 }
-
-/* Hide the browser's default radio button */
-.container input {
-  position: absolute;
+.pcDiv1 {
+  width: 1050px;
+  height: 120px;
+  padding: 20px 0 10px 0;
+  background-color: #f5f2f2;
+  position: relative;
+  display: flex;
+  /* border: 1px solid black; */
+  justify-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.pcDiv1 h3 {
+  font-size: 25px;
+}
+.filter {
+  position: relative;
+  display: flex;
+  gap: 20px;
+}
+.filter label {
+  gap: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+.filter label input {
   opacity: 0;
-  cursor: pointer;
 }
-
-/* Create a custom radio button */
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 31px;
-  width: 31px;
-
-  border-radius: 50%;
-}
-
-/* On mouse-over, add a grey background color */
-/* .container:hover input ~ .checkmark {
-  background-color: #ccc;
-} */
-
-/* When the radio button is checked, add a blue background */
-/* .container input:checked ~ .checkmark {
-  background-color: #2196f3;
-} */
-
-/* Create the indicator (the dot/circle - hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
+.filter label span .imgHover {
   display: none;
-  background: url(https://www.tatamotors.com/wp-content/themes/tatamotors_2019/images/radio-active-img.png)
-    no-repeat 0 0;
-  width: 31px;
-  height: 31px;
-  left: 0;
-  top: 0;
 }
-.checkmark:before {
-  content: "";
+.filter label:hover span .imgHover {
+  display: block;
+}
+
+.pcDiv2 {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* width: 1050px; */
+  gap: 10px;
+  width: 950px;
+  height: 350px;
+  padding: 0 0 0 2px;
+  /* border: 1px solid black; */
+  background-color: #f5f2f2;
+}
+.pcDiv2Top {
+  width: 100%;
+  height: 270px;
+  /* border: 1px solid red; */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.pcDiv2TopScroll {
+  width: auto;
+  height: 310px;
+  /* border: 1px solid yellow; */
+  display: flex;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  position: relative;
+  gap: 37px;
+  padding-left: 2px;
+}
+.pcDiv2CardBox {
+  width: 289px;
+  /* height: 300px; */
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  /* box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.5); */
+  box-shadow: 0px 0.1px 0.4px -5px rgba(0, 0, 0, 0.348),
+    0px 0.3px 1.1px -5px rgba(0, 0, 0, 0.5),
+    0px 0.6px 2.7px -5px rgba(0, 0, 0, 0.652), 0px 2px 9px -5px rgba(0, 0, 0, 1);
+  /* border: 1px solid brown; */
+}
+.pcDiv2CardBox a {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid rgb(255, 0, 0); */
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  background: #ffffff;
+}
+/* .image img{
+
+} */
+.pcDiv2CardBox .image {
+  position: relative;
+}
+.pcDiv2CardBox a span {
   position: absolute;
-  display: none;
-
-  background: url(https://www.tatamotors.com/wp-content/themes/tatamotors_2019/images/radio-inactive-img.png)
-    no-repeat 0 0;
-  width: 31px;
-  height: 31px;
+  z-index: 1;
   left: 0;
-  top: 0;
+  bottom: 0;
+  background-color: #030352cc;
+  padding: 2px 14px;
+  color: #ffffff;
+  font-size: 14px;
 }
-
-/* Show the indicator (dot/circle) when checked */
-.container input:checked ~ .checkmark:after {
-  display: block;
+.content {
+  float: left;
+  width: 100%;
+  height: 80px;
+  padding: 10px 18px;
 }
-.container input:not(:checked) ~ .checkmark:before {
-  display: block;
+.content p {
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  width: 100%;
+  height: 50px;
+  color: #000000;
+  font-size: 15px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
 }
-.container input:hover ~ .checkmark:after {
-  display: block;
+.pcDiv2Bottom {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 25px;
+  /* border: 1px solid blue; */
+  margin-top: 15px;
 }
-
-
+.pcDiv2Bottom button {
+  width: 35px;
+  height: 35px;
+  border-radius: 3px;
+  background: #030352;
+  border: none;
+  outline: none;
+  color: #ffffff;
+}

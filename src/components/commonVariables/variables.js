@@ -116,3 +116,22 @@ export const profileCardEvents = [
   },
   
 ];
+
+// ------------------------------motor detail images component start------------------------------//
+export const contentDetails = [
+  {
+    image: "./images/motorImage/slider1.jpg",
+    des: "Cars and Sport Utility Vehicles",
+    des2: "Experience our connected cars and UVs ",
+  },
+  {
+    image: "./images/motorImage/slider2.jpg",
+    des: "Trucks & Busses",
+    des2: "Delivering unmatched performance on all terrains ",
+  },
+  {
+    image: "./images/motorImage/slider4.jpg",
+    des: "Defence",
+    des2: "Serving the nation through the widest range of military products",
+  },
+];

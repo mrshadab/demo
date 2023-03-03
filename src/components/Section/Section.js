@@ -8,7 +8,7 @@ import {
 
 // ------------------------------Empty component start------------------------------//
 
-export function Empty() {
+ function Empty() {
   return (
     <>
       <div className={style.Empty}></div>
@@ -21,7 +21,7 @@ export function Empty() {
 // ------------------------------motor detail images component start------------------------------//
 
 //this is variable in array of object form
-export const contentDetails = [
+ const contentDetails = [
   {
     image: "./images/motorImage/slider1.jpg",
     des: "Cars and Sport Utility Vehicles",
@@ -39,7 +39,7 @@ export const contentDetails = [
   },
 ];
 
-export function ImageSection(ImageContainer) {
+ function ImageSection(ImageContainer) {
   return (
     <div className={style.motorContainer}>
       {contentDetails.map((value, index) => {
@@ -68,87 +68,8 @@ export function ImageSection(ImageContainer) {
 // ------------------------------motor detail images component end ------------------------------//
 // ------------------------Popup of {happy to connect} component  start------------------------ //
 
-// export function HappyToConnect() {
-//   const [isVisible, setIsVisible] = useState(false);
-
-//   const toggle = () => {
-//     setIsVisible(!isVisible);
-//   };
-
-//   return (
-//     <div
-//       id="container"
-//       className={style.container}
-//       style={{
-//         background: isVisible ? "#00000070" : "",
-//         height: isVisible ? "calc(100vh - 72px)" : "",
-//         width: isVisible ? "100vw" : "",
-//       }}
-//     >
-//       <div
-//         className={style.parentDiv}
-//         style={{ height: isVisible ? "252px" : "43px" }}
-//       >
-//         <button
-//           onClick={toggle}
-//           className={style.btn}
-//           style={{ backgroundColor: isVisible ? "#030352" : " #2f71b7" }}
-//         >
-//           Happy To Connect
-//         </button>
-//         <div className={style.popupDiv}>
-//           <div className={style.popupDiv1}>
-//             <a href="#">
-//               <img src="./images/call_n.jpg" alt="" />
-//             </a>
-//           </div>
-//           <div className={style.popupDiv2}>
-//             <li>
-//               <a href="#">
-//                 <img
-//                   src="./images/dealer-locator-icon.png"
-//                   alt=""
-//                   width={22}
-//                   height={35}
-//                 />
-//                 <span>
-//                   Dealer <br /> Locator
-//                 </span>
-//               </a>
-//             </li>
-//             <li>
-//               <a href="#">
-//                 <img
-//                   src="./images/calculator-icon.png"
-//                   alt=""
-//                   width={26}
-//                   height={28}
-//                 />
-//                 <span>
-//                   EMI <br /> Calculator
-//                 </span>
-//               </a>
-//             </li>
-//             <li>
-//               <a href="#">
-//                 <img
-//                   src="./images/contact-us-icon.png"
-//                   alt=""
-//                   width={26}
-//                   height={28}
-//                 />
-//                 <span>
-//                   Contact <br /> Us
-//                 </span>
-//               </a>
-//             </li>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-export function HappyToConnect() {
+// 
+ function HappyToConnect() {
   const [isVisible, setIsVisible] = useState(false);
   const containerRef = useRef(null);
 
@@ -250,7 +171,7 @@ export function HappyToConnect() {
 
 // ------------------------------Profile Card  component  Start----------------------------- //
 
-export function ProfileCards() {
+ function ProfileCards() {
   const [selected, setSelected] = useState("All");
   // const imageSpan = document.getElementById("imageSpan");
 

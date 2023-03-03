@@ -1,27 +1,19 @@
 import IndividualIntervalsExample from "../components/Carousel/Carousel";
 import { Nav } from "../components/Navbar/Nav";
-import {
-  ImageSection,
-  contentDetails,
-  HappyToConnect,
-  Empty,
-  ProfileCards,
-  // CustomRadioButtons
-} from "../components/Section/Section";
-
-
-
+import { Empty } from "../components/emptyDiv/EmptyDiv";
+import { HappyToConnect } from "../components/happyToConnectPopup/HappyPopup";
+import { ProfileCards } from "../components/profileCards/profileCard";
+import { ImageSection } from "../components/motorDetailsImage/motorImage";
 
 const Home = () => {
   return (
     <>
       <Nav />
       <IndividualIntervalsExample />
-      <Empty /> 
-      <ImageSection ImageContainer={contentDetails} />
+      <Empty />
+      <ImageSection />
       <HappyToConnect />
-      {/* <ProfileCard /> */}
-      <ProfileCards/>
+      <ProfileCards />
     </>
   );
 };
